@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58174d52-cb8a-41bb-a1dd-a95d205a5435" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/dknn_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/examples/dknn_reliability.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/kneighbors/knn_compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dknn_trail_forest/DKNN_Model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_var.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_var.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_000.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_001.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_001_and_002.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_002.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_003.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_004.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_005.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_006.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_007.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_008.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_009.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_010.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_011.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_full_exc_001.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_full_exc_001_002.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/saved_weights/deepnn_subset_full_exc_002_2.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer/DataSet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer/knn_tests.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="trail_project" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/dknn_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="130" column="49" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer/dkneighbors/Dknn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-981">
+              <caret line="224" selection-start-line="224" selection-end-line="224" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/trainer/kneighbors/KNN_Model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="311" column="41" lean-forward="true" selection-start-line="311" selection-start-column="41" selection-end-line="311" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer/kneighbors/save_npz_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer/kneighbors/knn_compare.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1828">
+              <caret line="5" column="33" selection-start-line="5" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer/data/DataSet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2610">
+              <caret line="180" selection-start-line="180" selection-end-line="180" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainer/cnn_model/train_local.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3465">
+              <caret line="246" column="26" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
+              <folding>
+                <element signature="e#45#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>__layers</find>
+      <find>__rep_layers</find>
+      <find>nearest_neighbor</find>
+      <find>__layer_outputs</find>
+      <find>layer_output</find>
+      <find>read_from_full_paths</find>
+      <find>DataFra</find>
+      <find>DataFrame</find>
+      <find>__train_set</find>
+      <find>calib_ml</find>
+      <find>self.rep_layers</find>
+      <find>layer_outputs</find>
+      <find>Computing multiset for layer</find>
+      <find>multi_sets</find>
+      <find>compute_nonconformity</find>
+      <find>compute_p_vals</find>
+      <find>split_data</find>
+      <find>shuffle</find>
+      <find>reset_weights</find>
+      <find>test_y</find>
+      <find>load</find>
+      <find>bucket_index</find>
+      <find>organize_buckets</find>
+      <find>compute_layer_outputs</find>
+      <find>print</find>
+      <find>read</find>
+      <find>rep_layer_ouptut</find>
+      <find>Model</find>
+      <find>read_img_io</find>
+      <find>imread</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/trainer/taskk.py" />
+        <option value="$PROJECT_DIR$/trainer/modelTF.py" />
+        <option value="$PROJECT_DIR$/trainer/test_read_data.py" />
+        <option value="$PROJECT_DIR$/trainer/trail_utils.py" />
+        <option value="$PROJECT_DIR$/trainer/config.yaml.py" />
+        <option value="$PROJECT_DIR$/trainer/evaluate_model.py" />
+        <option value="$PROJECT_DIR$/trainer/task2.py" />
+        <option value="$PROJECT_DIR$/trainer/task3.py" />
+        <option value="$PROJECT_DIR$/trainer/task4.py" />
+        <option value="$PROJECT_DIR$/trainer/task_local.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/trainer/task.py" />
+        <option value="$PROJECT_DIR$/trainer/plot_results.py" />
+        <option value="$PROJECT_DIR$/trainer/visualize_inner.py" />
+        <option value="$PROJECT_DIR$/trainer/analyze.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
+        <option value="$PROJECT_DIR$/trainer/eval.py" />
+        <option value="$PROJECT_DIR$/trainer/save_weights.py" />
+        <option value="$PROJECT_DIR$/trainer/preprocess.py" />
+        <option value="$PROJECT_DIR$/trainer/train_gs.py" />
+        <option value="$PROJECT_DIR$/trainer/train_local.py" />
+        <option value="$PROJECT_DIR$/trainer/random_tests.py" />
+        <option value="$PROJECT_DIR$/trainer/DataSet.py" />
+        <option value="$PROJECT_DIR$/trainer/csv_save.py" />
+        <option value="$PROJECT_DIR$/global_var.py" />
+        <option value="$PROJECT_DIR$/trainer/knn_tests.py" />
+        <option value="$PROJECT_DIR$/dknn_trail_forest/dknn.py" />
+        <option value="$PROJECT_DIR$/trainer/save_npz_data.py" />
+        <option value="$PROJECT_DIR$/trainer/google_cloud_knn.py" />
+        <option value="$PROJECT_DIR$/trainer/config.yaml" />
+        <option value="$PROJECT_DIR$/trainer/knn_example.py" />
+        <option value="$PROJECT_DIR$/trainer/KNN_Model.py" />
+        <option value="$PROJECT_DIR$/dknn_trail_forest/DKNN_Model.py" />
+        <option value="$PROJECT_DIR$/tests/data_test.py" />
+        <option value="$PROJECT_DIR$/trainer/dkneighbors/DKNN_Model.py" />
+        <option value="$PROJECT_DIR$/tmp.py" />
+        <option value="$PROJECT_DIR$/trainer/data/DataSet.py" />
+        <option value="$PROJECT_DIR$/tests/dknn_tests.py" />
+        <option value="$PROJECT_DIR$/trainer/examples/knn_example.py" />
+        <option value="$PROJECT_DIR$/trainer/kneighbors/knn_example.py" />
+        <option value="$PROJECT_DIR$/trainer/kneighbors/save_npz_data.py" />
+        <option value="$PROJECT_DIR$/trainer/dkneighbors/Dknn.py" />
+        <option value="$PROJECT_DIR$/trainer/examples/dknn_reliability.py" />
+        <option value="$PROJECT_DIR$/trainer/kneighbors/knn_compare.py" />
+        <option value="$PROJECT_DIR$/trainer/kneighbors/KNN_Model.py" />
+        <option value="$PROJECT_DIR$/trainer/cnn_model/train_local.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="89" />
+    <option name="y" value="23" />
+    <option name="width" value="1293" />
+    <option name="height" value="793" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+              <item name="cnn_model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+              <item name="dkneighbors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trail_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trail_project" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+              <item name="kneighbors" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="trail_project" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="trail_project" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trainer/kneighbors" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.knn_compare">
+    <configuration name="KNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer/kneighbors/KNN_Model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dknn_reliability" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer/examples/dknn_reliability.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="knn_compare" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer/kneighbors/knn_compare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="save_npz_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer/kneighbors/save_npz_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trail_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer/cnn_model/train_local.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.knn_compare" />
+        <item itemvalue="Python.KNN_Model" />
+        <item itemvalue="Python.train_local" />
+        <item itemvalue="Python.dknn_reliability" />
+        <item itemvalue="Python.save_npz_data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58174d52-cb8a-41bb-a1dd-a95d205a5435" name="Default Changelist" comment="" />
+      <created>1556298141036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556298141036</updated>
+      <workItem from="1556298176103" duration="27408000" />
+      <workItem from="1556583704765" duration="30938000" />
+      <workItem from="1556749456091" duration="21775000" />
+      <workItem from="1556838232490" duration="5877000" />
+      <workItem from="1556866202344" duration="31885000" />
+      <workItem from="1557260858431" duration="760000" />
+      <workItem from="1557264551187" duration="30163000" />
+      <workItem from="1557810415573" duration="48000" />
+      <workItem from="1557810486752" duration="48626000" />
+      <workItem from="1558156120420" duration="6610000" />
+      <workItem from="1558330174815" duration="459000" />
+      <workItem from="1558367465465" duration="42566000" />
+      <workItem from="1558857298948" duration="11189000" />
+      <workItem from="1559011653739" duration="1774000" />
+      <workItem from="1559338339547" duration="193000" />
+      <workItem from="1559606821712" duration="51000" />
+      <workItem from="1559606957540" duration="1108000" />
+      <workItem from="1559758854853" duration="1498000" />
+      <workItem from="1559760684490" duration="1183000" />
+      <workItem from="1559795991296" duration="4000" />
+      <workItem from="1559796097767" duration="1542000" />
+      <workItem from="1559855365914" duration="1599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 12h 49m 58s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_multiset_output - 2019.06.26 at 12h 50m 37s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_multiset_output" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 12h 53m 12s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dknn_tests_py - 2019.06.26 at 12h 56m 19s.xml">
+      <configuration name="Unittests in dknn_tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dknn_tests_py - 2019.06.26 at 12h 57m 15s.xml">
+      <configuration name="Unittests in dknn_tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 12h 58m 06s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 13h 00m 39s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 13h 07m 21s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 13h 08m 53s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_dknn_tests_TestDknn_test_nonconformity_testMultiSet - 2019.06.26 at 13h 10m 48s.xml">
+      <configuration name="Unittests for dknn_tests.TestDknn.test_nonconformity_testMultiSet" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="267256000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="89" y="23" width="1293" height="793" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" sideWeight="0.5043478" side_tool="true" weight="0.1799507" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49565217" visible="true" weight="0.16273585" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.11133603" side_tool="true" weight="0.3877841" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" sideWeight="0.9041835" visible="true" weight="0.3951498" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.7908232" weight="0.4786932" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.88866395" weight="0.38516405" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" sideWeight="0.49772727" weight="0.12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" sideWeight="0.8941441" visible="true" weight="0.028380634" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="300" height="560" id="Documentation" order="5" sideWeight="0.10585585" side_tool="true" visible="true" weight="0.028380634" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" sideWeight="0.5043478" side_tool="true" weight="0.1799507" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49565217" visible="true" weight="0.18560606" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.11133603" side_tool="true" weight="0.3877841" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="3" sideWeight="0.9041835" visible="true" weight="0.39104477" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.7908232" weight="0.4786932" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.88866395" weight="0.3877841" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" sideWeight="0.49772727" weight="0.12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" sideWeight="0.8941441" visible="true" weight="0.028380634" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="300" height="560" id="Documentation" order="5" sideWeight="0.10585585" side_tool="true" visible="true" weight="0.028380634" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/neighbors/classification.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer/save_npz_data.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer/knn_example.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer/KNN_Model.py</url>
+          <line>309</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer/cnn_model/train_local.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer/kneighbors/KNN_Model.py</url>
+          <line>370</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trail_project$analyze.coverage" NAME="analyze Coverage Results" MODIFIED="1558995234338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$task2.coverage" NAME="task2 Coverage Results" MODIFIED="1557902391242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$evaluate_model.coverage" NAME="evaluate_model Coverage Results" MODIFIED="1558884429820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$test_read_data.coverage" NAME="test_read_data Coverage Results" MODIFIED="1556758885340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$trail_utils.coverage" NAME="trail_utils Coverage Results" MODIFIED="1556758939172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1558382712346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/trail_project$modelTF.coverage" NAME="modelTF Coverage Results" MODIFIED="1556659755101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/trainer/util.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/visualize_inner.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
+    <entry file="file://$PROJECT_DIR$/trainer/eval.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/analyze.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/save_weights.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/training_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4168">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1253">
+          <caret line="269" column="8" selection-start-line="269" selection-start-column="8" selection-end-line="269" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/saving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="412" selection-start-line="412" selection-end-line="412" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5256" selection-start-line="5256" selection-end-line="5256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/genericpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/csv_save.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/train_local.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="289" selection-start-line="289" selection-end-line="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scipy/stats/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="473" selection-start-line="473" selection-end-line="473" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/modelTF.py" />
+    <entry file="file://$PROJECT_DIR$/global_var.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/DataSet.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="569" selection-start-line="569" selection-end-line="569" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/neighbors/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/IPython/core/interactiveshell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="3295" selection-start-line="3295" selection-end-line="3295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/save_npz_data.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/train_gs.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/KNN_Model.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/knn_example.py" />
+    <entry file="file://$PROJECT_DIR$/dknn_trail_forest/DKNN_Model.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/neighbors/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="679" selection-start-line="679" selection-end-line="679" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/lib/io/file_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/neighbors/approximate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="262" column="63" lean-forward="true" selection-start-line="262" selection-start-column="63" selection-end-line="262" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/kneighbors/plot_results.py" />
+    <entry file="file://$PROJECT_DIR$/trainer/kneighbors/knn_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/cnn_model/train_gs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#45#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/examples/dknn_reliability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1341">
+          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/kneighbors/save_npz_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/data/DataSet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="180" selection-start-line="180" selection-end-line="180" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/cnn_model/train_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3465">
+          <caret line="246" column="26" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
+          <folding>
+            <element signature="e#45#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/dknn_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="130" column="49" selection-start-line="130" selection-start-column="49" selection-end-line="130" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/dkneighbors/Dknn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-981">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/kneighbors/knn_compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1828">
+          <caret line="5" column="33" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainer/kneighbors/KNN_Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="311" column="41" lean-forward="true" selection-start-line="311" selection-start-column="41" selection-end-line="311" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
