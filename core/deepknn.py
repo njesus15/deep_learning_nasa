@@ -1,4 +1,3 @@
-import os
 import pickle
 import random
 
@@ -9,12 +8,11 @@ from keras_preprocessing.image import ImageDataGenerator
 from sklearn.neighbors import LSHForest
 from sklearn.utils import shuffle
 
-import global_var
-from trainer.cnn_model.train_local import create_trail_model
-from trainer.cnn_model.train_local import split_sequence
-from trainer.data.DataSet import DataSet
-from trainer.kneighbors.KNN_Model import read_img_io
-from trainer.kneighbors.KNN_Model import rep_layer_ouptut
+from core.cnn_model import create_trail_model
+from core.dataset import DataSet
+from utils.data_processing import read_img_io
+from utils.data_processing import rep_layer_ouptut
+from utils.data_processing import split_sequence
 
 
 class DknnModel():
@@ -391,26 +389,26 @@ def split_data(data_frame):
     print('Size of train, valid, and calib data:', len(train_df), len(valid_df), len(callib_df))
 
     return train_df, valid_df, callib_df
-#if __name__ == '__main__':
+# if __name__ == '__main__':
 
-  #  model_info = None
- #   if os.path.exists('workspace.pickle'):
-      #  with open('workspace.pickle', 'rb') as handle:
-           # model_info = pickle.load(handle)
+#  model_info = None
+#   if os.path.exists('workspace.pickle'):
+#  with open('workspace.pickle', 'rb') as handle:
+# model_info = pickle.load(handle)
 
-    #dknn = DknnModel('/Users/jesusnavarro/Desktop/DataSet/',
-                  #   ['/001/'], ['/002/'], n_test_points=40)
-    #dknn.model = model_info
+# dknn = DknnModel('/Users/jesusnavarro/Desktop/DataSet/',
+#   ['/001/'], ['/002/'], n_test_points=40)
+# dknn.model = model_info
 
-    #pd = dknn.evaluate()
+# pd = dknn.evaluate()
 
-    # dknn.calibrate_layers()
-    # test_ml, calib_ml, test_label, calib_label = dknn.multi_sets()
+# dknn.calibrate_layers()
+# test_ml, calib_ml, test_label, calib_label = dknn.multi_sets()
 
-    # set the calibration non conformity values as parameter
-    # dknn.calibration_ncvals = dknn.compute_nonconformity(multiset=calib_ml)[1]
-    # test_ncvals = dknn.compute_nonconformity(multiset=test_ml)[1]
+# set the calibration non conformity values as parameter
+# dknn.calibration_ncvals = dknn.compute_nonconformity(multiset=calib_ml)[1]
+# test_ncvals = dknn.compute_nonconformity(multiset=test_ml)[1]
 
-    # get size of calibration non conformity values
-    # size_A = len(dknn.calibration_ncvals.flatten())
-    # dknn.p_values = dknn.compute_p_vals(test_ncvals, size_A)
+# get size of calibration non conformity values
+# size_A = len(dknn.calibration_ncvals.flatten())
+# dknn.p_values = dknn.compute_p_vals(test_ncvals, size_A)

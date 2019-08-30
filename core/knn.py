@@ -1,17 +1,15 @@
-import random
-from keras import backend as K
 import pickle
-from keras.layers import Dense
+import random
+
 import numpy as np
-from imageio import imread
 from keras import Model
-from keras.engine.saving import load_model
+from keras import backend as K
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.utils import shuffle
-from tensorflow.python.lib.io import file_io
-from trainer.cnn_model.train_local import create_trail_model
-from trainer.cnn_model.train_local import split_sequence
-from trainer.data.DataSet import DataSet
+
+from core.cnn_model import create_trail_model
+from core.dataset import DataSet
+from utils.data_processing import split_sequence
 
 
 class KModel():
@@ -208,76 +206,6 @@ def compute_neighbors(output_data, full_labels, k, knn_fit):
     return neighbor_dict
 
 
-def read_img_io(file_path_df):
-    """
-    Helper method to read data into array
-
-    :param file_path_df: data frame containing file name paths and class lables
-    :return: numpy array of image representation and numpy array of labels
-
-    """
-    key = {'right': np.array([1, 0, 0]),
-           'center': np.array([0, 1, 0]),
-           'left': np.array([0, 0, 1])}
-
-    if not isinstance(file_path_df, list):  # Nest as a list if itsa singleton
-        file_path = [file_path_df]
-    else:
-        file_path = file_path_df
-
-    labels = []
-    imgs = []
-
-    for paths in file_path:
-        if len(paths) == 2:  # images, labels
-            file_name = paths[0]
-            class_ = key[paths[1]]
-            labels.append(class_)
-        else:
-            file_name = paths  # dataframe only contains path string
-
-        with file_io.FileIO(file_name, 'rb') as f:
-            img = f.read()
-            img = imread(img)
-            img = img * (1.0 / 255.0)
-            imgs.append(img)
-
-    return np.array(imgs), np.array(labels)
-
-
-def rep_layer_ouptut(paths, model, logs=True):
-    """
-    Computes the prediction of the neural network 'model'.
-    In this application, the prediction of 'model' is the representational layer and not the softmax activation.
-
-    :param paths: List of tuples containing (img_path_names, class label)
-    :param model: Keras model without output layer
-
-    :return: (ndarray) images, (int) number of images
-    """
-    output = []
-    size = len(paths)
-    i = 1
-    labels = []
-    KEY = {'right': np.array([1, 0, 0]),
-           'center': np.array([0, 1, 0]),
-           'left': np.array([0, 0, 1])}
-
-    for file in paths:
-        img_path = file[0]
-        label = file[1]
-        labels.append(KEY[label])
-        # get img array
-        img_arr, _ = read_img_io(img_path)
-        int_out = model.predict(img_arr)
-        output.append(int_out)
-        if size > 100 and logs:
-            if i % float((size // 100)) == 0.0:  # logs of loaded data percentage
-                print("Output % {:g} of the data".format(float('{:.4g}'.format(100.0 * float(i) / float(size)))))
-            i += 1
-    return np.array(output).reshape(size, -1), np.array(labels)
-
-
 def save_model_outputs(train_df, test_df, id, rep_layer):
     train_x, train_y = rep_layer_ouptut(train_df, rep_layer)
     test_x, test_y = rep_layer_ouptut(test_df, rep_layer)
@@ -308,7 +236,7 @@ def imagenet_knn():
     print(vgg16_rep_layer.summary())
 
     # Get the dataframe
-    #data_001 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
+    # data_001 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
     #                   train_subsets=[],
     #                   test_subsets=['/001/'],
     #                   loc='local')
@@ -322,10 +250,10 @@ def imagenet_knn():
     x_train, y_train = x1[:-2000], y1[:-2000]
 
     # Shuffle Data and seperate
-    #train_df = data_001.test_set[2]
-    #random.shuffle(train_df)
-    #test_df = train_df[-2000:]
-    #train_df = train_df[:-2000]
+    # train_df = data_001.test_set[2]
+    # random.shuffle(train_df)
+    # test_df = train_df[-2000:]
+    # train_df = train_df[:-2000]
 
     base_x, base_y = shuffle(x2, y2)
 
@@ -343,25 +271,25 @@ def reset_weights(model):
         if hasattr(layer, 'kernel_initializer'):
             layer.kernel.initializer.run(session=session)
 
+
 def test_knn():
-    #file_path = 'trail_forest_results/results/trained_models/deepnn_subset_full_exc_001.h5'
+    # file_path = 'trail_forest_results/results/trained_models/deepnn_subset_full_exc_001.h5'
     model = create_trail_model()
-    #model = load_model(file_path)
+    # model = load_model(file_path)
     reset_weights(model)
 
     rep_layer = Model(inputs=model.input,
                       outputs=model.get_layer(index=7).output)
     print(rep_layer.summary())
 
-
     data_001 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
                        train_subsets=[],
                        test_subsets=['/001/'],
                        )
     data2 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
-                       train_subsets=[],
-                       test_subsets=['/002/'],
-                       )
+                    train_subsets=[],
+                    test_subsets=['/002/'],
+                    )
 
     # Shuffle Data
     train_df = data_001.test_set[2]
@@ -374,6 +302,7 @@ def test_knn():
     knn_model.train_full_model()
 
     return knn_model
+
 
 def plot_results():
     no_baseline = [
@@ -408,15 +337,15 @@ def plot_results():
             bl_acc.append(pickle.load(handle))
 
     import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(1,1)
+    fig, ax = plt.subplots(1, 1)
     print(len(no_bl_acc))
     for acclist in no_bl_acc:
-        ax.plot(np.arange(10) +1, acclist)
-    plt.legend(['vgg16 layer 4,4,32', 'layer 8,8,32', 'layer 4,4,32','layer 2,2,32', 'layer 1,1,32', 'dim 4096'])
+        ax.plot(np.arange(10) + 1, acclist)
+    plt.legend(['vgg16 layer 4,4,32', 'layer 8,8,32', 'layer 4,4,32', 'layer 2,2,32', 'layer 1,1,32', 'dim 4096'])
     plt.title('KNN Performance on Random NN no Baseline')
     plt.xlabel('Percent of 001 training data')
     plt.ylabel('Accuracy')
-    plt.ylim(0.5,1)
+    plt.ylim(0.5, 1)
 
     fig, ax = plt.subplots(1, 1)
     for acclist in bl_acc:
@@ -425,6 +354,4 @@ def plot_results():
     plt.title('KNN Performance on Random NN With Baseline')
     plt.xlabel('Percent of 001 training data')
     plt.ylabel('Accuracy')
-    plt.ylim(0.2,1)
-
-
+    plt.ylim(0.2, 1)

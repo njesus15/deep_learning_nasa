@@ -1,13 +1,13 @@
 import os
+import pickle
+
 import numpy as np
 from imageio import imread
 from keras.preprocessing import image
 from tensorflow.python.lib.io import file_io
-import pickle
-from itertools import product
+
 
 class DataSet():
-
     """ A class for reading the trail forest dataset
 
     Attributes:
@@ -19,24 +19,22 @@ class DataSet():
         data_struct (dictionary): Depicts training and test dataset names for forest trail data
     """
 
-    def __init__(self, root_dir, train_subsets, test_subsets, type='list', loc='local'):
+    def __init__(self, root_dir, train_subsets, test_subsets, paths_only='list', location='local'):
         """ The constructor for the class DataSet
 
         :param root_dir: local directory of dataset
         :param train_subsets: list of strings containing which dataset to train
         :param test_subsets: list of strings containing which dataset to test
-        :param type: str to choose opt of train_set and test_set att. to contain numpy array of images
-        :param loc: location to train the model: 'gs': google cloud, "local": local machine
+        :param paths_only: str 'list' to return paths only
+        :param location: location to train the model: 'gs': google cloud, "local": local machine
 
-        TODO: Replace variable 'type' with boolean instance variable i.e. array_bool
         """
-        self.array_bool = not type == 'list'
-        self.location = loc
+        self.array_bool = not paths_only
+        self.location = location
         self.root_directory = root_dir
         self.train_set = self.array_data(train_subsets, self.array_bool)
         self.test_set = self.array_data(test_subsets, self.array_bool)
         self.data_struct = {'train': train_subsets, 'test': test_subsets}
-
 
     def array_data(self, dataframe, array_bool):
         """
@@ -78,12 +76,13 @@ class DataSet():
 
             data_frame = self.read_from_full_paths(paths, target_subset)
 
-        else: # Read from local machine
+        else:  # Read from local machine
             for class_label in path_names.keys():
                 for dir_path in path_names[class_label]:
-                    paths.append([self.collect_image_paths(dir_path), class_label])  # hard coded to fit file structure of dataset
+                    paths.append([self.collect_image_paths(dir_path),
+                                  class_label])  # hard coded to fit file structure of dataset
             corrected_path_df = []
-            for path in paths: # Different structure (i.e., [([filenames], class)....]
+            for path in paths:  # Different structure (i.e., [([filenames], class)....]
                 class_ = path[1]
                 for file_name in path[0]:
                     corrected_path_df.append([file_name, class_])
@@ -155,7 +154,7 @@ class DataSet():
         return data_frame
 
     def read_from_full_paths(self, paths, target_subset, class_label=None):
-        data_frame=[]
+        data_frame = []
 
         # one hot encoding key
         key = {'right': np.array([1, 0, 0]),

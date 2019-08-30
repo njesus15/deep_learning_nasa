@@ -1,20 +1,18 @@
 # Importing the Keras libraries and packages
-import argparse as ag
 import pickle
 
 import keras
 import numpy as np
 from imageio import imread
-from keras import Model
 from keras.layers import Conv2D
 from keras.layers import Dense
-from keras.layers import Flatten
 from keras.layers import MaxPooling2D
 from keras.models import Sequential
-from keras.models import load_model
 # Questions:
 # How were the convolution parameters chosen?
 from tensorflow.python.lib.io import file_io
+
+from utils.data_processing import split_sequence
 
 
 def create_trail_model(mean=0.0, std=0.1):
@@ -42,7 +40,6 @@ def create_trail_model(mean=0.0, std=0.1):
 
     classifier.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer=k))
     classifier.add(MaxPooling2D(pool_size=(2, 2)))
-
 
     # Step 4 - Full connection
     classifier.add(Dense(units=4096, activation='relu', kernel_initializer=k))
@@ -75,21 +72,6 @@ def split_data_frame(data_frame, n):
         if count < n:
             split[0].append(row)
         else:
-            split[1].append(row)
-        counts[row[1]] = count + 1
-    return split
-
-
-def split_sequence(data_frame, n, buffer):
-    split = [[], []]
-
-    counts = {}
-    for row in data_frame:
-        count = counts.get(row[1], 0)
-        if count % (2 * n) < n:
-            split[0].append(row)
-        elif count % n > buffer and count % n < n - buffer:
-            # Leave buffer for test data
             split[1].append(row)
         counts[row[1]] = count + 1
     return split
@@ -175,8 +157,7 @@ def test_train_deep_nn(datasets=None, train_file='gs://dataset-jesus-bucket/Data
 
     if datasets == None:
         datasets = ['/000/', '/001/', '/002/', '/003/', '/004/', '/006/', '/005/', '/007/', '/008/', '/010/', '/009/',
-                '/011/']
-
+                    '/011/']
 
     split = split_sequence(data_frame, 60, 15)
 
@@ -242,16 +223,13 @@ def test_train_deep_nn(datasets=None, train_file='gs://dataset-jesus-bucket/Data
     # Save data to google cloud storage: - subset1: files 000 and 003 are trained
     #                                    - subset2: All files are trained
 
-
 # path = "/Users/jesusnavarro/Desktop/trail_project/"
 # test_train_deep_nn(path)
 # test_load_model()
 
 
-#test_train_deep_nn(**arguments)
+# test_train_deep_nn(**arguments)
 # test_load_model(**arguments)
-#print("end")
+# print("end")
 
-#model = create_trail_model()
-
-
+# model = create_trail_model()

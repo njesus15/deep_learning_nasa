@@ -1,14 +1,8 @@
 # Importing the Keras libraries and packages
 import argparse as ag
-import pickle
 import os
-import random
-
 import pickle
 import random
-
-from keras.models import Model
-from sklearn.neighbors import KNeighborsClassifier
 
 import numpy as np
 from imageio import imread
@@ -20,9 +14,7 @@ from keras.layers import MaxPooling2D
 from keras.models import Sequential
 from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator
-# Questions:
-# How were the convolution parameters chosen?
-from tensorflow.python.lib.io import file_io
+from sklearn.neighbors import KNeighborsClassifier
 from tensorflow.python.lib.io import file_io
 
 
@@ -63,8 +55,8 @@ def create_trail_model():
 
     return classifier
 
-def split_sequence(data_frame, n, buffer):
 
+def split_sequence(data_frame, n, buffer):
     """ Splits data frame containing paths and class labels into test and training set with a buffer to discard
         closely identical data (note the data is temporal).
 
@@ -127,7 +119,7 @@ def read_data_file_io(path, subset_data, data_type):
                 img = f.read()
                 img = imread(img)
                 if data_type == 'test':
-                    img = img * (1.0/255.0)
+                    img = img * (1.0 / 255.0)
                 images.append(img)
                 labels.append(key[file[1]])
             state += 1.0
@@ -151,6 +143,7 @@ def fix_path(data_frame):
         path_df.append([true_path, file[1]])
     return path_df
 
+
 def knn_accuracy(clf, x_train, y_train, model):
     int_output = model.predict(x_train)
     int_output = int_output.reshape(x_train.shape[0], -1)
@@ -163,7 +156,6 @@ def knn_accuracy(clf, x_train, y_train, model):
 
 def test_train_deep_nn(train_file='gs://dataset-jesus-bucket/DataSet/',
                        job_dir='gs://dataset-jesus-bucket/', **args):
-
     # create model
 
     # Read the data containing gs paths
@@ -173,7 +165,7 @@ def test_train_deep_nn(train_file='gs://dataset-jesus-bucket/DataSet/',
 
     # Will split the training due to memory consumption
     datasets = [['/000/', '/001/', '/003/', '/004/', '/006/', '/005/', '/007/', '/008/', '/010/', '/009/',
-                '/011/', 'full_exc_002_2']]
+                 '/011/', 'full_exc_002_2']]
 
     split = split_sequence(data_frame, 60, 15)
 
@@ -184,51 +176,50 @@ def test_train_deep_nn(train_file='gs://dataset-jesus-bucket/DataSet/',
         subset_path = "deepnn_subset_" + subset_data[-1] + ".h5"
 
         train_x, train_y, normalized_check = read_data_file_io(split[0], subset_data[:-1], data_type="train")
-        test_x, test_y, normalized_check = read_data_file_io(split[1], subset_data[:-1],  data_type="train")
+        test_x, test_y, normalized_check = read_data_file_io(split[1], subset_data[:-1], data_type="train")
 
         if normalized_check:
             scale_factor = 1.0
         else:
             scale_factor = 1.0 / 255.0
 
-    # ImageDataGenerator is used to append additional data that is rescaled
-    # sheared, zoomed, and rotated for test and training sets
+        # ImageDataGenerator is used to append additional data that is rescaled
+        # sheared, zoomed, and rotated for test and training sets
         train_datagen = ImageDataGenerator(rescale=scale_factor,
-                                       shear_range=0.2,
-                                       zoom_range=0.2,
-                                       rotation_range=18)
+                                           shear_range=0.2,
+                                           zoom_range=0.2,
+                                           rotation_range=18)
 
         test_datagen = ImageDataGenerator(scale_factor)
         acc_path_to_save = 'gs://data-daisy/model_accuracy_' + subset_data[0][:-1] + '.pickle'
 
-    # train_set = train_datagen.flow_from_dataframe(train_df,
-    #                                           target_size=(101, 101),
-    #                                           batch_size=32,
-    #                                           class_mode='categorical')
-    # test_set = test_datagen.flow_from_dataframe(test_df,
-    #                                          target_size=(101, 101),
-    #                                          batch_size=32,
-    #                                          class_mode='categorical')
+        # train_set = train_datagen.flow_from_dataframe(train_df,
+        #                                           target_size=(101, 101),
+        #                                           batch_size=32,
+        #                                           class_mode='categorical')
+        # test_set = test_datagen.flow_from_dataframe(test_df,
+        #                                          target_size=(101, 101),
+        #                                          batch_size=32,
+        #                                          class_mode='categorical')
         # Importing the Keras libraries and packages
 
-            # classifier.save("deepnn_trail_60_15_ds2short.h5")
+        # classifier.save("deepnn_trail_60_15_ds2short.h5")
 
-            # Save data to google cloud storage: - subset1: files 000 and 003 are trained
-            #                                    - subset2: All files are trained
-
+        # Save data to google cloud storage: - subset1: files 000 and 003 are trained
+        #                                    - subset2: All files are trained
 
         # Augements the data. Note that we the previous version uses flow_from_dataframe
-    # however since this is being run on Google Cloud, the data is first imported into arrays
-    # therefore train_datagen.flow() is used.
+        # however since this is being run on Google Cloud, the data is first imported into arrays
+        # therefore train_datagen.flow() is used.
 
         train_set = train_datagen.flow(train_x, train_y, batch_size=128, shuffle=True)
         test_set = test_datagen.flow(test_x, test_y, batch_size=128, shuffle=True)
 
         classifier.fit_generator(train_set,
-                             steps_per_epoch=train_x.shape[0] // 128,
-                             epochs=4,
-                             validation_data=test_set,
-                             validation_steps=test_x.shape[0] // 128)
+                                 steps_per_epoch=train_x.shape[0] // 128,
+                                 epochs=4,
+                                 validation_data=test_set,
+                                 validation_steps=test_x.shape[0] // 128)
 
         print("Done training dataset subset: " + subset_path)
 
@@ -254,6 +245,7 @@ def test_train_deep_nn(train_file='gs://dataset-jesus-bucket/DataSet/',
     y = 0
     print("done testing dataset now doing knn")
 
+
 def knn_accuracy(clf, x_train, y_train, model):
     int_output = model.predict(x_train)
     int_output = int_output.reshape(x_train.shape[0], -1)
@@ -266,14 +258,11 @@ def knn_accuracy(clf, x_train, y_train, model):
     print('Knn acc is', acc)
     return acc
 
+
 def imagenet_knn(train_file='gs://dataset-jesus-bucket/DataSet/',
-                       job_dir='gs://dataset-jesus-bucket/', **args):
-    import pandas as pd
-    from keras.applications.vgg16 import VGG16, preprocess_input, decode_predictions
-    from keras.preprocessing import image
-    import keras.backend as K
+                 job_dir='gs://dataset-jesus-bucket/', **args):
+    from keras.applications.vgg16 import VGG16
     import numpy as np
-    import sys
 
     file_stream = file_io.FileIO("gs://data-daisy/full_gs_paths_large_size.pickle", mode='rb')
     data_frame = pickle.load(file_stream)
@@ -281,32 +270,30 @@ def imagenet_knn(train_file='gs://dataset-jesus-bucket/DataSet/',
     vgg16_model = VGG16(weights='imagenet', include_top=True)
 
     vgg16_rep_layer = Model(inputs=vgg16_model.input,
-                      outputs=vgg16_model.get_layer(index=21).output)
+                            outputs=vgg16_model.get_layer(index=21).output)
 
     print(vgg16_rep_layer.summary())
-
 
     x_001, y_001, normalized_check = read_data_file_io(data_frame, ['/001/'], data_type="test")
     x_002, y_002, normalized_check = read_data_file_io(data_frame, ['/002/'], data_type="test")
 
     x_001_list, y_001_list = x_001.tolist(), y_001.tolist()
-    x_002_list , y_002_list = x_002.tolist(), y_002.tolist()
-
+    x_002_list, y_002_list = x_002.tolist(), y_002.tolist()
 
     list_to_randomize = []
     list_test = []
 
     for (x, y) in zip(x_001_list, y_001_list):
-        list_to_randomize.append([x,y])
+        list_to_randomize.append([x, y])
 
-    random.shuffle(list_to_randomize) # shuffle data used to train
+    random.shuffle(list_to_randomize)  # shuffle data used to train
     n = 10
     batch_size = len(list_to_randomize) // n
     remainder = len(list_to_randomize) - batch_size * n
     print(batch_size)
 
     for (x, y) in zip(x_002_list, y_002_list):
-        list_to_randomize.append([x,y])
+        list_to_randomize.append([x, y])
 
     # extract data to test (001 dataset up to batch size * n + remainder
     x_001_randarr = np.array([item[0] for item in list_to_randomize[0: n * batch_size + remainder - 1]])
@@ -358,6 +345,7 @@ def imagenet_knn(train_file='gs://dataset-jesus-bucket/DataSet/',
 
     print(accuracy_list)
 
+
 # path = "/Users/jesusnavarro/Desktop/trail_project/"
 # test_train_deep_nn(path)
 # test_load_model()
@@ -366,6 +354,7 @@ def load_model_test(**args):
     model_file = file_io.FileIO('gs://data-daisy/deepnn_subset_001_and_002.h5', mode='rb')
     model = load_model('gs://data-daisy/deepnn_subset_001_and_002.h5')
     print(model.summary())
+
 
 print("here")
 
@@ -390,5 +379,3 @@ arguments = args.__dict__
 load_model_test(**arguments)
 # test_load_model(**arguments)
 print("end")
-
-

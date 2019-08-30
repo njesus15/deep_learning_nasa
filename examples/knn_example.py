@@ -1,12 +1,11 @@
-from io import BytesIO
-from keras.applications.vgg16 import VGG16, preprocess_input, decode_predictions
 import numpy as np
+
 
 def plot_results():
     import pickle
     losses = []
     root = '/Users/jesusnavarro/Desktop/knn_tests_rand_nn/'
-    paths =  ['random_nn_traintest_001_bl002_out_1_4096.pickle',
+    paths = ['random_nn_traintest_001_bl002_out_1_4096.pickle',
              'random_nn_traintest_001_out_1_4096.pickle']
 
     paths = [root + path for path in paths]
@@ -28,10 +27,10 @@ def plot_results():
     plt.title('Random NN KNN Performance: Output dim 4096')
     plt.xlabel('Percent of Dataset 1')
     plt.ylabel('Accuracy')
-    plt.ylim(0,1)
+    plt.ylim(0, 1)
     plt.legend(['With Baseline 002',
                 'No Baseline'])
 
     plt.show()
 
-#plot_results()
+# plot_results()

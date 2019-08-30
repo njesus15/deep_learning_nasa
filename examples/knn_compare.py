@@ -1,15 +1,15 @@
 import random
-from keras import backend as K
+
+import numpy as np
 from keras import Model
+from keras import backend as K
 from keras.engine.saving import load_model
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.utils import shuffle
-from tensorflow.python.lib.io import file_io
-from trainer.cnn_model.train_local import create_trail_model
-from trainer.cnn_model.train_local import split_sequence
-from trainer.data.DataSet import DataSet
-from trainer.kneighbors.KNN_Model import rep_layer_ouptut
-import numpy as np
+
+from core.cnn_model import create_trail_model
+from core.dataset import DataSet
+from utils.data_processing import split_sequence, rep_layer_ouptut
 
 
 def reset_weights(model):
@@ -28,11 +28,10 @@ def correct_data_indeces(prediction, test_y):
 
 
 def name():
-
     trained_model = load_model(
         '/Users/jesusnavarro/Desktop/trail_forest_results/results/trained_models/deepnn_subset_001.h5')
     random_model = create_trail_model()
-    #reset_weights(random_model)
+    # reset_weights(random_model)
 
     random_rep = Model(inputs=random_model.input,
                        outputs=random_model.get_layer(index=7).output)
@@ -110,37 +109,36 @@ def name():
     print("Train max, min, mean, std", np.amax(train_rangeL), np.amin(train_rangeL), np.mean(train_rangeL),
           np.std(train_rangeL))
 
+
 if __name__ == '__main__':
-        import torch.nn
+    import torch.nn
 
-        input_size = 3 * 101*101
-        data_001 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
-                           train_subsets=[],
-                           test_subsets=['/001/'],
-                           type='arr'
-                           )
-        datax, datay = data_001.test_set[0], data_001.test_set[1]
+    input_size = 3 * 101 * 101
+    data_001 = DataSet(root_dir='/Users/jesusnavarro/Desktop/DataSet/',
+                       train_subsets=[],
+                       test_subsets=['/001/'],
+                       type='arr'
+                       )
+    datax, datay = data_001.test_set[0], data_001.test_set[1]
 
-        datax, datay = shuffle(datax, datay)
+    datax, datay = shuffle(datax, datay)
 
-        train_x, train_y = datax[:-2000], datay[:-2000]
-        test_x, test_y = datax[-2000:], datay[-2000:]
+    train_x, train_y = datax[:-2000], datay[:-2000]
+    test_x, test_y = datax[-2000:], datay[-2000:]
 
-        train_x = torch.tensor(train_x)
-        train_x = train_x.view(train_x.size(0), input_size)
+    train_x = torch.tensor(train_x)
+    train_x = train_x.view(train_x.size(0), input_size)
 
-        test_x = torch.tensor(test_x)
-        test_x = test_x.view(test_x.size(0), input_size)
+    test_x = torch.tensor(test_x)
+    test_x = test_x.view(test_x.size(0), input_size)
 
+    dense = torch.nn.Sequential(torch.nn.Linear(input_size, 1024),
+                                torch.nn.ReLU()).float()
 
-        dense = torch.nn.Sequential(torch.nn.Linear(input_size, 1024),
-                                    torch.nn.ReLU()).float()
+    out_train = dense(train_x.float())
+    out_test = dense(test_x.float())
 
-        out_train = dense(train_x.float())
-        out_test = dense(test_x.float())
-
-        clf = KNeighborsClassifier()
-        clf.fit(out_train.detach().numpy(), train_y)
-        s = clf.score(out_test.detach().numpy(), test_y)
-        print(s)
-
+    clf = KNeighborsClassifier()
+    clf.fit(out_train.detach().numpy(), train_y)
+    s = clf.score(out_test.detach().numpy(), test_y)
+    print(s)

@@ -1,19 +1,10 @@
-import os
 # Importing the Keras libraries and packages
-import argparse as ag
-import pickle
 import os
-import random
-
 import pickle
 import random
 
 import keras
-from keras.models import Model
-from sklearn.neighbors import KNeighborsClassifier
-
 import numpy as np
-from imageio import imread
 from keras import Model
 from keras.layers import Conv2D
 from keras.layers import Dense
@@ -21,9 +12,10 @@ from keras.layers import Flatten
 from keras.layers import MaxPooling2D
 from keras.models import Sequential
 from keras.models import load_model
-from trainer.DataSet import DataSet
-from tensorflow.python.lib.io import file_io
-from tensorflow.python.lib.io import file_io
+from sklearn.neighbors import KNeighborsClassifier
+
+from core.dataset import DataSet
+
 
 def create_trail_model():
     # Initialising the CNN
@@ -72,6 +64,7 @@ def save_weights():
             path_to_save = '/Users/jesusnavarro/Desktop/trail_project/results/' + 'saved_weights/' + model
             tmp_model.save_weights(path_to_save)
 
+
 def load_from_url():
     import ssl
     ssl._create_default_https_context = ssl._create_unverified_context
@@ -83,6 +76,7 @@ def load_from_url():
     weights = model.load_weights(weights_path)
 
     return model
+
 
 def knn_accuracy(clf, x_train, y_train, model):
     int_output = model.predict(x_train)
@@ -108,7 +102,7 @@ def knn_increase_data():
                        type='nl',
                        loc='gs')
 
-    datasets = ['/001/', '/002/', '/003/', '/004/', '/005/', '/006/','/007/', '/008/', '/009/', '/010/', '/011/']
+    datasets = ['/001/', '/002/', '/003/', '/004/', '/005/', '/006/', '/007/', '/008/', '/009/', '/010/', '/011/']
     accuracy_list = {}
 
     for ds in datasets:
@@ -120,8 +114,6 @@ def knn_increase_data():
                            loc='gs')
 
         accuracy_list[ds] = []
-
-
 
         data_array = data_001.test_set
         d2 = data_002.test_set
@@ -140,7 +132,6 @@ def knn_increase_data():
 
         for (x, y) in zip(d2[0], d2[1]):
             list_to_randomize.append([x, y])
-
 
         # extract data to test (001 dataset up to batch size * n + remainder
         x_001_randarr = np.array([item[0] for item in list_to_randomize[0: n * batch_size + remainder - 1]])
@@ -164,8 +155,10 @@ def knn_increase_data():
         for i in range(10):
             print("Fitting on batch number:", z)
 
-            x_test_list = [item[0] for item in list_to_randomize[0:(i + 1) * batch_size - 1 + remainder * (i // 9)]] + [item[0] for item in list_to_randomize[n * batch_size + remainder:]]
-            y_test_list = [item[1] for item in list_to_randomize[0:(i + 1) * batch_size - 1 + remainder * (i // 9)]] + [item[1] for item in list_to_randomize[n * batch_size + remainder:]]
+            x_test_list = [item[0] for item in list_to_randomize[0:(i + 1) * batch_size - 1 + remainder * (i // 9)]] + [
+                item[0] for item in list_to_randomize[n * batch_size + remainder:]]
+            y_test_list = [item[1] for item in list_to_randomize[0:(i + 1) * batch_size - 1 + remainder * (i // 9)]] + [
+                item[1] for item in list_to_randomize[n * batch_size + remainder:]]
 
             x = np.array(x_test_list)
             y = np.array(y_test_list)
@@ -186,5 +179,6 @@ def knn_increase_data():
     with open('gs://data-daisy/knn_test.pickle', 'wb+') as handle:
         pickle.dump(accuracy_list, handle)
     return accuracy_list
+
 
 knn_increase_data()
